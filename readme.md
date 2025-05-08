@@ -6,7 +6,6 @@
 ## Objetivos generales
 Implementar las últimas mejoras en nuestro proyecto y Dockerizarlo.
 
-
 ## Objetivos específicos
 Documentar las rutas restantes de nuestro proyecto.
 - Añadir los últimos tests
@@ -18,23 +17,40 @@ Documentar las rutas restantes de nuestro proyecto.
 - Desarrollar el Dockerfile para generar una imagen del proyecto.
 - Subir la imagen de Docker a Dockerhub y añadir en un ReadMe.md al proyecto que contenga el link de dicha imagen.
 
-## Criterios:
-Desarrollo de Tests Funcionales:
-- Se han desarrollado tests funcionales para todos los endpoints del router adoption.router.js.
-- Todos los endpoints del router adoption.router.js están cubiertos por tests funcionales.
-- Los tests verifican de manera efectiva el funcionamiento de cada endpoint, incluyendo casos de éxito y casos de error.
 
-Creación del Dockerfile:
-- Se ha creado un Dockerfile que permite generar una imagen del proyecto de manera adecuada.
-- El Dockerfile está correctamente configurado para construir la imagen del proyecto de forma reproducible.
-- Se incluyen todos los pasos necesarios en el Dockerfile para instalar las dependencias, copiar los archivos del proyecto y configurar el entorno de ejecución.
 
-Subida de la Imagen a Dockerhub:
-- Se ha subido la imagen generada del proyecto a Dockerhub.
-- La imagen del proyecto se encuentra disponible en Dockerhub y es accesible a través de un enlace público.
-- Se ha añadido un ReadMe.md al proyecto que contiene el enlace a la imagen de Dockerhub.
+## Docker
 
-Documentación en ReadMe.md:
-- El ReadMe.md del proyecto contiene información detallada, incluyendo el enlace a la imagen de Dockerhub.
-- El ReadMe.md proporciona instrucciones claras para ejecutar el proyecto con Docker y acceder a la imagen en Dockerhub.
-- Se incluyen detalles sobre cómo construir la imagen, ejecutar el contenedor y utilizar el proyecto de manera efectiva.
+    - Crear Imagen
+        ❯ docker build -t backend3-entrega-final_juan-armas .
+
+    - Crear una instancia de imagen
+        ❯ docker run -p 8080:4000 backend3-entrega-final_juan-armas
+
+        Usando ENV desde consola
+        ❯ docker run -e "PORT=4000" -e "MONGODB_URL=mongodb+srv://juancho:je05zblita9mijJh@cluster0.fd1th.mongodb.net/FinalBackendIII" -p 4000:4000 backend3-entrega-final_juan-armas
+
+
+    #Subir IMG a DockerHub
+        - Login
+            ❯ docker login
+            ❯ docker login -u neptunonet
+        - cramos Tag
+            ❯ docker tag backend3-entrega-final_juan-armas neptunonet/backend3-entrega-final_juan-armas:1.0.0
+            ❯ docker push neptunonet/backend3-entrega-final_juan-armas:1.0.0
+
+
+## Docker
+
+### Enlace a la imagen en DockerHub
+La imagen de este proyecto está disponible en DockerHub en el siguiente enlace:
+[https://hub.docker.com/repository/docker/neptunonet/backend3-entrega-final_juan-armas/](https://hub.docker.com/repository/docker/neptunonet/backend3-entrega-final_juan-armas/)
+
+### Instrucciones para ejecutar el proyecto con Docker
+
+#### Opción 1: Descargar y ejecutar la imagen desde DockerHub
+Para ejecutar el proyecto utilizando la imagen publicada en DockerHub, ejecuta el siguiente comando:
+
+```bash
+docker pull neptunonet/backend3-entrega-final_juan-armas:latest
+docker run -e "PORT=4000" -e "MONGODB_URL=mongodb+srv://juancho:je05zblita9mijJh@cluster0.fd1th.mongodb.net/FinalBackendIII" -p 4000:4000 backend3-entrega-final_juan-armas:latest
