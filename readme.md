@@ -22,7 +22,7 @@ Documentar las rutas restantes de nuestro proyecto.
 
 ### Enlace a la imagen en DockerHub
 La imagen de este proyecto está disponible en DockerHub en el siguiente enlace:
-[https://hub.docker.com/repository/docker/neptunonet/backend3-entrega-final_juan-armas/](https://hub.docker.com/repository/docker/neptunonet/backend3-entrega-final_juan-armas/)
+[https://hub.docker.com/r/neptunonet/backend3-entrega-final_juan-armas/](https://hub.docker.com/r/neptunonet/backend3-entrega-final_juan-armas)
 
 ### Instrucciones para ejecutar el proyecto con Docker
 
