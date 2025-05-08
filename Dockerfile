@@ -13,11 +13,8 @@ RUN npm install
 # Copiar el resto del código fuente de la aplicación
 COPY . .
 
-# Crear directorio para imágenes si no existe
-RUN mkdir -p ./src/public/img
-
 # Exponer el puerto en el que se ejecuta la aplicación
-EXPOSE 4000
+EXPOSE 8080
 
 # Comando para iniciar la aplicación
 CMD ["npm", "start"]
