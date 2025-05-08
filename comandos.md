@@ -15,6 +15,6 @@
             ❯ docker login
             ❯ docker login -u neptunonet
         - cramos Tag
-            ❯ docker tag backend3-entrega-final_juan-armas neptunonet/backend3-entrega-final_juan-armas:1.0.0
-            ❯ docker push neptunonet/backend3-entrega-final_juan-armas:1.0.0
+            ❯ docker tag backend3-entrega-final_juan-armas neptunonet/backend3-entrega-final_juan-armas:1.0.1
+            ❯ docker push neptunonet/backend3-entrega-final_juan-armas:1.0.1
 

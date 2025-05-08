@@ -30,5 +30,5 @@ La imagen de este proyecto está disponible en DockerHub en el siguiente enlace:
 Para ejecutar el proyecto utilizando la imagen publicada en DockerHub, ejecuta el siguiente comando:
 
 ```bash
-docker pull neptunonet/backend3-entrega-final_juan-armas:1.0.0
-docker run -e "PORT=4000" -e "MONGODB_URL=mongodb+srv://juancho:je05zblita9mijJh@cluster0.fd1th.mongodb.net/FinalBackendIII" -p 4000:4000 neptunonet/backend3-entrega-final_juan-armas:1.0.0
+docker pull neptunonet/backend3-entrega-final_juan-armas:1.0.1
+docker run -e "PORT=4000" -e "MONGODB_URL=mongodb+srv://juancho:je05zblita9mijJh@cluster0.fd1th.mongodb.net/FinalBackendIII" -p 4000:4000 neptunonet/backend3-entrega-final_juan-armas:1.0.1
